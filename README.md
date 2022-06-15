@@ -23,6 +23,6 @@ An experimental static site project for use
 ### Add `Commitizen` as part of `husky` commit hook
 - run `npm install husky --save-dev` to install the package as a dev dependency
 - run `npx husky install`
-- run `npx husky add .husky/prepare-commit-msg "exec < /dev/tty && cz --hook || true"`
+- run `npx husky add .husky/prepare-commit-msg "exec < /dev/tty && node_modules/.bin/cz --hook || true"`
 - run `git add .husky/prepare-commit-msg`
 - now, whenever you run `git commit`, it would run you through the commitizen prompter
