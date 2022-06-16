@@ -2,15 +2,19 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
-COMMIT_MESSAGE=$(cat $1)
+COMMIT_MESSAGE=$(cat "$1")
 
-# if [ -n "$COMMIT_MESSAGE" ]; then 
-#   echo "Please provide a valid commit message"
-#   exit 1
-# fi 
+echo $BRANCH_NAME
+echo $COMMIT_MESSAGE
 
+if [ -n $COMMIT_MESSAGE ]
+then 
+  echo "[ERROR]: Please provide a valid commit message"
+  exit 1
+else 
+  echo "($BRANCH_NAME)"': '"$COMMIT_MESSAGE" > "$1"
+fi 
 
-echo "($BRANCH_NAME)"': '"$COMMIT_MESSAGE" > "$1"
 
 
 
