@@ -6,7 +6,7 @@ COMMIT_MESSAGE=$(cat ${1})
 
 echo $BRANCH_NAME
 
-echo $HUSKY_GIT_PARAMS
+echo $COMMIT_MESSAGE
 
 echo 'done'
 
