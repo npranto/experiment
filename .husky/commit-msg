@@ -4,10 +4,12 @@
 BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
 COMMIT_MESSAGE=$(cat "$1")
 
-echo $BRANCH_NAME
+# if [ -n "$COMMIT_MESSAGE" ]
+# then 
+#   exit 1
+# fi 
 
-echo $COMMIT_MESSAGE
+echo "[$NAME]"': '"$COMMIT_MESSAGE" > "$1"
 
-echo 'done'
 
 
