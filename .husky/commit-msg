@@ -9,6 +9,7 @@ COMMIT_MESSAGE=$(cat $1)
 #   exit 1
 # fi 
 
+
 echo "($BRANCH_NAME)"': '"$COMMIT_MESSAGE" > "$1"
 
 
