@@ -7,13 +7,14 @@ COMMIT_MESSAGE=$(cat "$1")
 echo $BRANCH_NAME
 echo $COMMIT_MESSAGE
 
-if [ $COMMIT_MESSAGE == "" ];
-then 
+if [ -n "$COMMIT_MESSAGE" ] 
+then
   echo "Oops! Please provide a valid commit message"
-  exit 1
-else 
+else
   echo "($BRANCH_NAME)"': '"$COMMIT_MESSAGE" > "$1"
-fi 
+fi
+
+
 
 
 
