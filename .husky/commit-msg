@@ -7,7 +7,7 @@ COMMIT_MESSAGE=$(cat "$1")
 echo $BRANCH_NAME
 echo $COMMIT_MESSAGE
 
-if [ $COMMIT_MESSAGE == 0 ]
+if [ $COMMIT_MESSAGE == "" ]
 then 
   echo "[ERROR]: Please provide a valid commit message"
   exit 1
