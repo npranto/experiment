@@ -2,7 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
-COMMIT_MESSAGE=$($0)
+COMMIT_MESSAGE=$0
 
 echo $BRANCH_NAME
 
