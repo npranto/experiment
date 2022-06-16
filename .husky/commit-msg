@@ -9,7 +9,7 @@ echo $COMMIT_MESSAGE
 
 if [ $COMMIT_MESSAGE == "" ];
 then 
-  echo "[ERROR]: Please provide a valid commit message"
+  echo "Oops! Please provide a valid commit message"
   exit 1
 else 
   echo "($BRANCH_NAME)"': '"$COMMIT_MESSAGE" > "$1"
